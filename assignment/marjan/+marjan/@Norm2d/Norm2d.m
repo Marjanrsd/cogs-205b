@@ -71,25 +71,16 @@ classdef Norm2d
    output = cdf(obj, x)
 
    % Log cumulative distribution function
+   output = logcdf(obj, X)
 
    % Random number generation
+   output = rnd(obj, X)
 
    % Deviance
+   output = deviance(obj, X)
 
    % Standardizer
    output = standardize(obj, X)
-
-
-    
-
-%         function obj = set.Mean(obj,Mean1)
-%             obj.Mean=Mean1
-%    
-%         end
-%         function value = get.Mean(obj)
-%             value=obj.Mean
-%    
-%     end
     end
 end
 

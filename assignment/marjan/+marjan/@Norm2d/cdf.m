@@ -3,9 +3,9 @@ function yax = cdf(obj, X)
 % using the mvncdf() function from the Statistics & Machine Learning
 % toolbox
 
-% if size(X, 2) ~= size(obj.Mean, 1)
-%     X = X';
-% end
+if size(X, 2) ~= size(obj.Mean, 1)
+    X = X';
+end
 
-yax = mvncdf(X, obj.Mean, obj.Covariance);
+yax = mvncdf(X, obj.Mean', obj.Covariance)';
 end
